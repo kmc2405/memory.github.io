@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>직무수행능력평가_1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Coming+Soon&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Coming+Soon&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        padding: 30px;
+        font-family: "Coming Soon", cursive;
+        background-image: url('./img/AdobeStock_356566072.jpeg');
+        background-size: cover;
+        background-repeat: repeat;
+    }
+
+    header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        width: 100%;
+    }
+
+    .logo {
+        position: absolute;
+        margin-left: 80px;
+        font-family: "Bad Script", cursive;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.3rem;
+    }
+
+    .logo a {
+        text-decoration: none;
+        color: black
+    }
+
+    .logo a:hover {
+
+        color: red;
+    }
+
+    .logo a:active {
+        color: gray;
+    }
+
+    .menu a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        color:black;
+        padding: 5px;
+        margin:0 10px 0 0;
+    }
+
+    .menu a:hover {
+        color: red;
+        border-bottom: 3px solid #000000;
+    }
+
+    .menu a:active {
+        color: gray;
+    }
+   
+    .ham {
+        align-items: center;
+        width: 45px;
+        margin-left: 5px;
+    }
+
+    .btn-ham {
+        background: none;
+        border: none;
+    }
+
+    .ham .line {
+        background: gray;
+        height: 8px;
+        width: 100%;
+        margin-bottom: 0.3rem;
+    }
+
+    .align {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    section {
+        width: 100%;
+        height: 700px;
+        display: flex;
+        justify-content : center;
+        align-items : center;
+    }
+
+    aside {
+        font-family: "Noto Sans KR", sans-serif;
+        width: 48%;
+        height: 500px;
+        display: flex;
+        justify-content : center;
+        align-items : center;
+    }
+
+    footer {
+        color: white;
+        background: black;
+        text-align: center;
+    }
+
+    nav {
+        text-align: center;
+        opacity: 0;
+        position: absolute;
+        top: 70px;
+        left: -500px;
+        width: 200px;
+        height: 355px;
+        background:black;
+    }
+
+    nav .active {
+        left:0;
+        animation: fadeIn 2s forwards, slideIn_0 2s forwards;
+        z-index: 10;
+    }
+   
+    nav a {
+        margin-top: 10px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        padding: 7px;
+        color: white
+    }
+    nav a:hover {
+       border-left: 8px solid red;
+       color: red;
+    }
+
+    nav.active {
+        left:0;
+        animation: fadeIn 2s forwards, slideIn_0 2s forwards;
+        z-index: 10;
+    }
+
+    .box {
+        display: inline-block;
+        margin: 5px;
+        opacity: 0;
+        animation: fadeIn 10s forwards;
+        }
+
+    h1 {
+        display: inline-block;
+        opacity: 0;
+        font-size: 5rem;
+        animation: fadeIn 6s forwards, slideIn 2s forwards;
+    }
+    h2 {
+        opacity: 0;
+        font-size: 3.5rem;
+        animation: fadeIn 3.5s forwards;
+    }
+
+    h3 {
+        display: inline-block;
+        opacity: 0;
+        font-size: 8rem;
+        animation: fadeIn 10s forwards, slideIn 4.5s forwards;
+    }
+
+    img {
+        opacity: 0;
+        animation: fadeIn 5s forwards;
+        padding: 10px;
+        margin-top:100px;
+        z-index: -1;
+    }
+
+    img:hover {
+        transform: scale(1.2);
+        transition: all 0.3s linear;
+    }
+
+    aside p { 
+        font-family: "Noto Sans KR", sans-serif;
+        font-weight: 800;
+        margin-left: 30px;
+        opacity: 0;
+        font-size: 2rem;
+        text-align: right;
+        animation: fadeIn 5s forwards
+    }
+
+    section p {
+        font-family: "Noto Sans KR", sans-serif;
+        font-weight: 400;
+        opacity: 0;
+        font-size: 1.1rem;
+        text-align: center;
+        animation: fadeIn 5s forwards
+    }
+    span {
+        font-family: "Noto Sans KR", sans-serif;
+        font-size: 8rem;
+        font-weight: 900;
+    }
+
+    .div_1 {
+        height: 700px;
+    }
+
+    footer {
+        margin-top: 30px;
+        width: 100%;
+        height: 50px;
+        background-color: rgba( 255, 255, 255, 0.0 );
+    }
+
+    footer .a0 {
+        color: rgb(0, 0, 0);
+        opacity: 100%;
+        text-decoration: none;
+    }
+
+    footer .logo0 {
+        font-family: "Bad Script", cursive;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.3rem;
+    }
+
+    footer p {
+        color: rgb(0, 0, 0);
+        font-family: "Coming Soon", cursive;
+        display: inline;
+    }
+
+    footer .p1 {
+        display: block;
+        font-size: 0.8rem;
+    }
+
+    aside .div_1 {
+        text-align: center;
+    }
+
+    
+    .item1 {
+    animation-name: animate1;
+    }
+
+    .item2 {
+    animation-name: animate1;
+    animation-delay: 2s;
+    }
+
+    @keyframes animate1 {
+    to {
+        opacity: 1;
+    }
+
+    from {
+            transform: translateY(100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+    }
+
+    @keyframes slideIn_0 {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+</style>
+</head>
+<body>
+<header>
+    <button class='btn-ham'>
+    <div class="ham">
+        <span class="hover">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        </span>
+    </div>
+    </button>  
+    <nav>
+        <a href='Birth.html'>Birth</a><br>
+        <a href='Character.html'>Character</a><br>
+        <a href='Friends.html'>Friends</a><br>
+        <a href='Dream.html'>Dream</a><br>
+        <a href='Fin.html'>Fin</a>
+    </nav>         
+    <div class="logo">
+        <a href='index.html'>Min Chan</a>
+    </div>
+    <div class="menu">
+        <a href='Birth.html'>Birth</a>
+        <a href='Character.html'>Character</a>
+        <a href='Friends.html'>Friends</a>
+        <a href='Dream.html'>Dream</a>
+        <a href='Fin.html'>Fin</a>
+    </div>
+</header>
+<div class="align">
+    <section>
+        <img class='item1'src='./img/1-26.jpg' width='300'>
+        <img class='item1'src='./img/1-24.jpg' width='300'>
+        <img class='item1'src='./img/1-7.jpg' width='400'>
+    </section>
+</div>
+<div class='align'>
+    <section>
+        <div class='div_1'>
+        <h1 class='item2'>"내 꿈은 <span>2</span>가지 였다."</h1>
+        <p class='item2'>나는 유년기 시절을 쭉 미술학원에서 보내곤했는데<br>
+            학원에서 나보다 나이 많은 형, 누나들이 멋있게 소묘하는 모습을 보고 <br>
+            문득 나도 저렇게 그리고 싶다는 생각이 들었고, 미술에 대한 꿈을 가지게 된<br>
+            가장 최초의 계기가 아니었나싶다.<br><br> 하지만 부모님께서는 내가 어려서부터 법조인이 되길 원하셨고,<br>
+            그림은 항상 취미로 두라는 말을 많이 들어왔다.<br> 어리석게도 어릴 때는 
+            이대로만 가면 부모님이 원하는 꿈도 이룰 수 있겠다고 생각하던 시절이 있었다.<br><br>
+            나는 내가 하고싶은 것과 해야하는 것 사이에서 20대가 될 때 까지 항상 방황하면서 우여곡절이 많았고,<br>
+            결국 이도저도 아닌 상태까지 왔었다. <br>하지만 끝내 선택을 했고, 나는 현재 그림도 그리며 예술대학에서
+            관련 공부를 하는중이다.
+        </p>
+        </div>
+    </section>
+</div>
+<footer>
+    <div class="logo0">
+        <a class='a0' href='index.html'>Min Chan</a>
+        <p>© Min Chan. All Rights Reserved.</p>
+        <p class='p1'>Kaywon Univ. &nbsp;Degital Media Design.</p>
+    </div>
+</footer>
+
+<script>
+    let hambox = document.querySelector('.btn-ham');
+    let nav = document.querySelector('nav');
+
+    hambox.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    })
+</script>
+</body>
+</html>
